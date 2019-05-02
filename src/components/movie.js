@@ -19,7 +19,7 @@ class Movie extends Component {
         const ActorInfo = ({actors}) => {
             return actors.map((actor, i) =>
                 <p key={i}>
-                    <b>{actor.actorName}</b> {actor.characterName}
+                    <b>{actor}</b>
                 </p>
             );
         };
@@ -43,7 +43,7 @@ class Movie extends Component {
                     <Panel.Body><Image className="image" src={currentMovie.imageUrl} thumbnail /></Panel.Body>
                     <ListGroup>
                         <ListGroupItem>{currentMovie.title}</ListGroupItem>
-                        <ListGroupItem><ActorInfo actors={currentMovie.actors} /></ListGroupItem>
+                        <ListGroupItem><ActorInfo actors={currentMovie.actor} /></ListGroupItem>
                         <ListGroupItem><h4><Glyphicon glyph={'star'} /> {currentMovie.avgRating} </h4></ListGroupItem>
                     </ListGroup>
                     <Panel.Body><ReviewInfo reviews={currentMovie.reviews} /></Panel.Body>
